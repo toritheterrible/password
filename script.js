@@ -27,6 +27,10 @@ var specialChar = [
    var hasNumbersChar = document.getElementById("hasNumbersChar").checked;
    var length = document.getElementById("length").value;
    
+   if(length > 128 || length < 8) {
+       return false;
+   }
+
    var passwordOptions = {
     length: length,
     hasSpecialChar : hasSpecialChar,
